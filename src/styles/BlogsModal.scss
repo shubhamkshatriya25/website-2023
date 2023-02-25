@@ -1,0 +1,73 @@
+.modal {
+  width: 80%;
+  margin-top: 5vh;
+
+  .modal-body {
+    height: auto;
+    max-height: 75vh;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .modal-body {
+      max-height: 60vh;
+    }
+  }
+}
+
+.blogs {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .blog-card {
+    padding: 10px 20px;
+    margin: 10px 0;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .blog-card {
+      margin: 20px 10px;
+      padding: 0;
+    }
+  }
+
+  a {
+    cursor: pointer;
+    text-decoration: none !important;
+    display: inline-block;
+    position: relative;
+    color: #170089;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 2px;
+    background-color: #170089;
+    border-radius: 4px;
+    scale: 0 1;
+    transform-origin: left;
+    transition: scale 0.35s;
+  }
+
+  a:hover::before {
+    scale: 1;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  small {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+}

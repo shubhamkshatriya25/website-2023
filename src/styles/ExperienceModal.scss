@@ -1,0 +1,71 @@
+.modal {
+  width: 80%;
+  margin-top: 5vh;
+
+  .modal-body {
+    height: auto;
+    max-height: 75vh;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .modal-body {
+      max-height: 60vh;
+    }
+  }
+}
+
+.experience {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .experience-card {
+    background-color: #f5d1b0;
+    padding: 20px;
+    margin: 20px;
+
+    .experience-title {
+      font-size: 14px;
+    }
+
+    .duration {
+      font-size: 12px;
+    }
+
+    .roles {
+      font-size: 15px;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    .experience-card {
+      margin: 20px 10px;
+    }
+  }
+
+  details > summary {
+    list-style-type: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details > summary::before {
+    content: "[ + ] ";
+  }
+
+  details[open] > summary::before {
+    content: "[ − ] ";
+  }
+
+  details[open] > p {
+    margin-bottom: 10px;
+  }
+}

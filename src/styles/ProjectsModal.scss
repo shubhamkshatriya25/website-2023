@@ -1,0 +1,74 @@
+.modal {
+  width: 80%;
+  margin-top: 5vh;
+
+  .modal-body {
+    height: auto;
+    max-height: 75vh;
+    text-align: left;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .modal-body {
+      max-height: 60vh;
+    }
+  }
+}
+
+.projects {
+  .project-card {
+    background-color: #b7d3ab;
+    padding: 20px;
+    margin: 20px;
+
+    @media only screen and (max-width: 900px) {
+      margin: 20px 10px;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .project-timeline {
+      font-size: 12px;
+    }
+
+    .project-title {
+      font-size: 20px;
+    }
+
+    .project-stack {
+      color: #31302c;
+      font-size: 14px;
+    }
+
+    .project-description {
+      color: #31302c;
+      font-size: 15px;
+      margin-top: 0;
+    }
+
+    details > summary {
+      list-style-type: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details > summary::before {
+      content: "[ + ] ";
+    }
+
+    details[open] > summary::before {
+      content: "[ − ] ";
+    }
+
+    details[open] > p {
+      margin-bottom: 10px;
+    }
+  }
+}

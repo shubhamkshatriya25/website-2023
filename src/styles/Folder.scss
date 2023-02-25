@@ -1,0 +1,22 @@
+.folder-icon {
+  width: 50px;
+  -webkit-filter: drop-shadow(2px 2px 0 #31302c);
+  filter: drop-shadow(2px 2px 0 #31302c);
+
+  .folder-icon-outline {
+    stroke: #3296d0;
+    stroke-width: 8;
+  }
+
+  .folder-icon-bg {
+    fill: #3296d0;
+  }
+
+  .folder-icon-fg {
+    fill: #53c2f8;
+  }
+}
+
+svg {
+  z-index: 3;
+}
