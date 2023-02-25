@@ -33,46 +33,6 @@ export default {
           But JavaScript never misses a chance to amaze everyone and handles a Divide by Zero in a different way. Let's see how!
           `,
         },
-        {
-          type: "",
-          heading: "",
-          link: "",
-          description: `
-            
-          `,
-        },
-        {
-          type: "",
-          heading: "",
-          link: "",
-          description: `
-            
-          `,
-        },
-        {
-          type: "",
-          heading: "",
-          link: "",
-          description: `
-            
-          `,
-        },
-        {
-          type: "",
-          heading: "",
-          link: "",
-          description: `
-            
-          `,
-        },
-        {
-          type: "",
-          heading: "",
-          link: "",
-          description: `
-            
-          `,
-        },
       ],
     };
   },
@@ -82,3 +42,11 @@ export default {
     },
   },
 };
+
+// blog json format
+// {
+//   type: "",
+//   heading: "",
+//   link: "",
+//   description: ``,
+// },
