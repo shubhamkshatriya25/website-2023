@@ -1,15 +1,11 @@
 .modal {
   position: absolute;
   background: #ececed;
-  width: 70%;
-  margin-top: 10vh;
-  max-width: 90%;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
   border: 2px solid #31302c;
-  border-radius: 10px 10px;
   padding-bottom: 10px;
   z-index: 5;
 
@@ -57,22 +53,43 @@
   }
 
   .modal-body {
-    height: auto;
-    max-height: 65vh;
     overflow-y: auto;
     padding: 20px 30px 30px;
     text-align: justify;
+  }
+
+  .modal-body-default-view {
+    height: auto;
+    max-height: 65vh;
+  }
+
+  .modal-body-full-screen-view {
+    height: 100%;
   }
 }
 
 @media only screen and (max-width: 900px) {
   .modal {
-    width: 90% !important;
-
-    .modal-body {
+    .modal-body-default-view {
       max-height: 60vh;
     }
   }
+
+  .modal-default-view {
+    width: 90%;
+  }
+}
+
+.modal-default-view {
+  width: 70%;
+  margin-top: 10vh;
+  max-width: 90%;
+  border-radius: 10px;
+}
+
+.modal-full-screen-view {
+  width: 100%;
+  height: 100%;
 }
 
 ::-webkit-scrollbar-track {
