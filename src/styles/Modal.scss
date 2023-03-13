@@ -16,16 +16,6 @@
     border-radius: 10px 10px 0 0;
     display: flex;
 
-    .close-icon {
-      font-size: 16px;
-      color: rgba(0, 0, 0, 0.5);
-      position: absolute;
-      visibility: hidden;
-      margin-left: 0.4px;
-      margin-top: 0.5px;
-      transition: all 0.2s ease-in-out;
-    }
-
     .modal-icon {
       width: 16px;
       height: 16px;
@@ -39,16 +29,19 @@
       background-color: #fd5e51;
     }
 
-    .modal-icon:nth-child(1):hover > .close-icon {
-      visibility: visible;
+    .modal-icon:nth-child(1):hover,
+    .modal-icon:nth-child(3):hover {
+      opacity: 0.7;
     }
 
     .modal-icon:nth-child(2) {
-      background-color: #febe03;
+      // background-color: #febe03;
+      border: 1px solid gray;
     }
 
     .modal-icon:nth-child(3) {
       background-color: #15cb36;
+      cursor: pointer;
     }
   }
 

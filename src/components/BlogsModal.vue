@@ -7,9 +7,7 @@
     }"
   >
     <div class="modal-header">
-      <span class="modal-icon close" @click="closeBlogsModal()">
-        <v-icon class="close-icon">mdi-close</v-icon>
-      </span>
+      <span class="modal-icon close" @click="closeBlogsModal()"> </span>
       <span class="modal-icon"></span>
       <span class="modal-icon" @click="toggleBlogsInFullScreenView()"></span>
     </div>

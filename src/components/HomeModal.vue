@@ -7,11 +7,9 @@
     }"
   >
     <div class="modal-header">
-      <span class="modal-icon" @click="kCloseHomeModal()">
-        <v-icon class="close-icon">mdi-close</v-icon>
-      </span>
+      <span class="modal-icon" @click="kCloseHomeModal()"> </span>
       <span class="modal-icon"></span>
-      <span class="modal-icon" @click="toggleHomeInFullScreenView()"></span>
+      <span class="modal-icon" @click="toggleHomeInFullScreenView()"> </span>
     </div>
     <div
       :class="{
