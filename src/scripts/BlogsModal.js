@@ -2,6 +2,7 @@ export default {
   name: "Blogs",
   data() {
     return {
+      isBlogsInFullScreen: false,
       blogs: [
         {
           type: "Web Development",
@@ -39,6 +40,9 @@ export default {
   methods: {
     closeBlogsModal: function () {
       this.$parent.$data.isBlogsOpen = false;
+    },
+    toggleBlogsInFullScreenView: function () {
+      this.isBlogsInFullScreen = !this.isBlogsInFullScreen;
     },
   },
 };

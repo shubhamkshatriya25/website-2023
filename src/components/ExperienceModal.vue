@@ -1,13 +1,28 @@
 <template>
-  <div class="modal">
+  <div
+    :class="{
+      modal: true,
+      'modal-full-screen-view': isExperienceInFullScreen,
+      'modal-default-view': !isExperienceInFullScreen,
+    }"
+  >
     <div class="modal-header">
       <span class="modal-icon close" @click="closeExperienceModal()">
         <v-icon class="close-icon">mdi-close</v-icon></span
       >
       <span class="modal-icon"></span>
-      <span class="modal-icon"></span>
+      <span
+        class="modal-icon"
+        @click="toggleExperienceInFullScreenView()"
+      ></span>
     </div>
-    <div class="modal-body">
+    <div
+      :class="{
+        'modal-body': true,
+        'modal-body-full-screen-view': isExperienceInFullScreen,
+        'modal-body-default-view': !isExperienceInFullScreen,
+      }"
+    >
       <h1>Experience</h1>
       <div class="experience">
         <div

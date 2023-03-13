@@ -1,20 +1,28 @@
 <template>
-  <div class="modal">
+  <div
+    :class="{
+      modal: true,
+      'modal-full-screen-view': isBlogsInFullScreen,
+      'modal-default-view': !isBlogsInFullScreen,
+    }"
+  >
     <div class="modal-header">
       <span class="modal-icon close" @click="closeBlogsModal()">
         <v-icon class="close-icon">mdi-close</v-icon>
       </span>
       <span class="modal-icon"></span>
-      <span class="modal-icon"></span>
+      <span class="modal-icon" @click="toggleBlogsInFullScreenView()"></span>
     </div>
-    <div class="modal-body">
+    <div
+      :class="{
+        'modal-body': true,
+        'modal-body-full-screen-view': isBlogsInFullScreen,
+        'modal-body-default-view': !isBlogsInFullScreen,
+      }"
+    >
       <h1>Blogs</h1>
       <div class="blogs">
-        <div
-          class="blog-card"
-          v-for="(blog, index) in blogs"
-          :key="index"
-        >
+        <div class="blog-card" v-for="(blog, index) in blogs" :key="index">
           <small>{{ blog.type }}</small>
           <a :href="blog.link" target="_blank">{{ blog.heading }}</a>
           <p>{{ blog.description }}</p>

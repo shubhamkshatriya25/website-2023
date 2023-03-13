@@ -1,17 +1,24 @@
 .modal {
-  width: 80%;
-  margin-top: 5vh;
-
   .modal-body {
+    text-align: left;
+  }
+
+  .modal-body-default-view {
     height: auto;
     max-height: 75vh;
   }
 
   @media only screen and (max-width: 900px) {
-    .modal-body {
+    .modal-body-default-view {
+      height: auto;
       max-height: 60vh;
     }
   }
+}
+
+.modal-default-view {
+  width: 80%;
+  margin-top: 5vh;
 }
 
 .blogs {

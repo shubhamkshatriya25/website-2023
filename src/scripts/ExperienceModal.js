@@ -2,6 +2,7 @@ export default {
   name: "Experience",
   data() {
     return {
+      isExperienceInFullScreen: false,
       experiences: [
         {
           duration: "Feb 2020 - Present",
@@ -50,6 +51,9 @@ export default {
   methods: {
     closeExperienceModal: function () {
       this.$parent.$data.isExperienceOpen = false;
+    },
+    toggleExperienceInFullScreenView: function () {
+      this.isExperienceInFullScreen = !this.isExperienceInFullScreen;
     },
   },
 };
