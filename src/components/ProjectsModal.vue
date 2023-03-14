@@ -1,13 +1,23 @@
 <template>
-  <div class="modal">
+  <div
+    :class="{
+      modal: true,
+      'modal-full-screen-view': isProjectsInFullScreen,
+      'modal-default-view': !isProjectsInFullScreen,
+    }"
+  >
     <div class="modal-header">
-      <span class="modal-icon close" @click="closeProjectsModal()">
-        <v-icon class="close-icon">mdi-close</v-icon>
-      </span>
+      <span class="modal-icon close" @click="closeProjectsModal()"></span>
       <span class="modal-icon"></span>
-      <span class="modal-icon"></span>
+      <span class="modal-icon" @click="toggleProjectsInFullScreenView()"></span>
     </div>
-    <div class="modal-body">
+    <div
+      :class="{
+        'modal-body': true,
+        'modal-body-full-screen-view': isProjectsInFullScreen,
+        'modal-body-default-view': !isProjectsInFullScreen,
+      }"
+    >
       <h1>Projects</h1>
       <div class="projects">
         <div
@@ -30,6 +40,5 @@
 </template>
 
 <script src="../scripts/ProjectsModal.js"></script>
-
 <style scoped src="../styles/Modal.scss" lang="scss"></style>
 <style scoped src="../styles/ProjectsModal.scss" lang="scss"></style>

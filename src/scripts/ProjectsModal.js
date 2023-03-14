@@ -2,6 +2,7 @@ export default {
   name: "ProjectsModal",
   data() {
     return {
+      isProjectsInFullScreen: false,
       projects: [
         {
           timeline: "Dec 2021 - Present",
@@ -63,6 +64,9 @@ export default {
   methods: {
     closeProjectsModal: function () {
       this.$parent.$data.isProjectsOpen = false;
+    },
+    toggleProjectsInFullScreenView: function () {
+      this.isProjectsInFullScreen = !this.isProjectsInFullScreen;
     },
   },
 };

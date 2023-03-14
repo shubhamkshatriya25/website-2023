@@ -1,13 +1,23 @@
 <template>
-  <div class="modal">
+  <div
+    :class="{
+      modal: true,
+      'modal-full-screen-view': isHomeInFullScreen,
+      'modal-default-view': !isHomeInFullScreen,
+    }"
+  >
     <div class="modal-header">
-      <span class="modal-icon close" @click="closeHomeModal()">
-        <v-icon class="close-icon">mdi-close</v-icon>
-      </span>
+      <span class="modal-icon" @click="kCloseHomeModal()"> </span>
       <span class="modal-icon"></span>
-      <span class="modal-icon"></span>
+      <span class="modal-icon" @click="toggleHomeInFullScreenView()"> </span>
     </div>
-    <div class="modal-body">
+    <div
+      :class="{
+        'modal-body': true,
+        'modal-body-full-screen-view': isHomeInFullScreen,
+        'modal-body-default-view': !isHomeInFullScreen,
+      }"
+    >
       <h1 style="text-align: left">Hello World, I'm Shubham!</h1>
       <p>
         As a software engineer at
@@ -73,15 +83,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  methods: {
-    closeHomeModal: function () {
-      this.$parent.$data.isHomeOpen = false;
-    },
-  },
-};
-</script>
-
+<script src="../scripts/HomeModal.js"></script>
 <style scoped src="../styles/Modal.scss" lang="scss"></style>
 <style scoped src="../styles/HomeModal.scss" lang="scss"></style>
